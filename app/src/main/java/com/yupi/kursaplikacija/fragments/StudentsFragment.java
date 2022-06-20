@@ -134,7 +134,7 @@ public class StudentsFragment extends Fragment {
                             intent.putExtra("phone", student.getPhone());
                             intent.putExtra("zip", student.getZipCode());
                             intent.putExtra("co", student.getCompany());
-
+                            intent.putExtra("s", "test");
                             startActivity(intent);
                         }
                     });
