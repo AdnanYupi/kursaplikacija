@@ -42,10 +42,18 @@ public class Student {
         this.phone = phone;
     }
 
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     private String zipCode;
     private String website;
     private String phone;
     private String name;
     private String city;
-
+    private String company;
 }

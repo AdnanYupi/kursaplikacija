@@ -10,9 +10,8 @@ import com.bumptech.glide.Glide;
 
 public class UserDetailsActivity extends AppCompatActivity {
 
-    private TextView username, website, phoneNumber, zipCode;
+    private TextView username, website, phoneNumber, zipCode, company;
     private ImageView profileImg;
-    private TextView testGithub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +23,8 @@ public class UserDetailsActivity extends AppCompatActivity {
         phoneNumber = findViewById(R.id.phone);
         zipCode = findViewById(R.id.zipCode);
         profileImg = findViewById(R.id.profileImage);
+        company = findViewById(R.id.company);
+
 
         Glide
                 .with(this)
@@ -36,6 +37,7 @@ public class UserDetailsActivity extends AppCompatActivity {
             String phone = getIntent().getStringExtra("phone");
             String web = getIntent().getStringExtra("web");
             String code = getIntent().getStringExtra("zip");
+            String co = getIntent().getStringExtra("co");
 
             if (name != null)
                 username.setText(name);
@@ -48,6 +50,9 @@ public class UserDetailsActivity extends AppCompatActivity {
 
             if (code != null)
                 zipCode.setText(code);
+
+            if (co != null)
+                company.setText(co);
         }
     }
 }

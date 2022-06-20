@@ -104,6 +104,9 @@ public class StudentsFragment extends Fragment {
                         JSONObject addressObject = object.getJSONObject("address");
                         String address = addressObject.getString("city");
                         String zipCode = addressObject.getString("zipcode");
+                        JSONObject companyObject = object.getJSONObject("company");
+                        String companyName = companyObject.getString("name");
+
 
                         Student student = new Student();
                         student.setName(username);
@@ -111,6 +114,7 @@ public class StudentsFragment extends Fragment {
                         student.setPhone(phone);
                         student.setWebsite(website);
                         student.setZipCode(zipCode);
+                        student.setCompany(companyName);
 
                         list.add(student);
                     }
@@ -129,6 +133,7 @@ public class StudentsFragment extends Fragment {
                             intent.putExtra("web", student.getWebsite());
                             intent.putExtra("phone", student.getPhone());
                             intent.putExtra("zip", student.getZipCode());
+                            intent.putExtra("co", student.getCompany());
 
                             startActivity(intent);
                         }
