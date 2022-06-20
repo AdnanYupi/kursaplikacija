@@ -12,6 +12,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
     private TextView username, website, phoneNumber, zipCode;
     private ImageView profileImg;
+    private TextView testGithub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
